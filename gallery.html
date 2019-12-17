@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery</title>
+	<style type="text/css">
+		.gallery-image {
+			height: 200px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+<h1>Gallery</h1>
+
+
+<script type="text/javascript">
+
+async function galleryLoad() {
+   	const response = await fetch('https://picsum.photos/v2/list');
+	const images = await response.json();
+
+	for (var i = 0; i < images.length; i++) {
+		
+		let galleryItem = document.createElement('div');
+		galleryItem.classList.add('gallery-item');
+		galleryItem.innerHTML = `<img class="gallery-image" src="${images[i].download_url}" alt="gallery image"/>`;
+		document.body.appendChild(galleryItem);
+    }
+}
+
+	
+galleryLoad();
+    
+
+</script>
+</body>
+</html>
