@@ -6,7 +6,7 @@ body {
     margin-bottom: 30px;
 }
 
-.left {
+/*.left {
     width: 20%;
     height: auto;
     padding-bottom: 50px;
@@ -15,7 +15,7 @@ body {
     border-right: 1px solid;
     background-color: #fff9e6;
 	display: inline-block;
-}
+}*/
 
 .right {
     height: auto;
@@ -31,24 +31,17 @@ body {
 .gallery-item{
 	width: 20%;
     height: auto;
-    padding-bottom: 50px;
     overflow: auto;
-    text-align: center;
-    border-right: 1px solid;
-    background-color: #fff9e6;
-	display: inline-block;
+   	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .gallery-image {
 	width: 200px;
 	height: 200px;
-	/* width: 20%;
-    height: auto;*/
-    padding-bottom: 50px;
+	margin: 3%;
     overflow: auto;
     text-align: center;
-    border-right: 1px solid;
-    background-color: #fff9e6;
 	display: inline-block;
 }
 
