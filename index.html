@@ -5,18 +5,23 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script type="text/javascript" src="scripts/script.js"></script>
+
 </head>
 <body>
-<script type="text/javascript" src="scripts/script.js"></script>
 
-<div class="both">
-	<div id="left" onload="galleryLoad();">
+<div class="grid-container">
+	<div class="image-place">
+
+		<div id="imgtext"></div> 
+		<img id="expandedImg" style="width:100%">
+
+	</div>
+	
+	<div class="gallery">
+		<div id="left"><script type="text/javascript">galleryLoad();</script></div>
 	</div>
 
-	<div class="right">
-		<div id="textOfImage"></div>
-		<div id="divToPrint"></div>
-	</div>
 </div>
 
 </body>

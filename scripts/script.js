@@ -6,9 +6,16 @@ async function galleryLoad() {
     
     let galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery-item');
-    galleryItem.innerHTML = `<img class="gallery-image" src="${images[i].download_url}" alt="gallery image"/>`;
-    document.body.appendChild(galleryItem);
+    galleryItem.innerHTML = `<img class="gallery-image" src="${images[i].download_url}" alt="gallery image" onclick="expandImage(this);"/>`;
+    document.getElementById("left").appendChild(galleryItem);
     }
 }
+
+function expandImage(imgs) {
   
-galleryLoad();
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}

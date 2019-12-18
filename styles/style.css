@@ -17,23 +17,53 @@ body {
 	display: inline-block;
 }*/
 
-.right {
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "gallery image-place";
+}
+
+.image-place { 
+	grid-area: image-place; 
+}
+
+.gallery { 
+	grid-area: gallery; 
+	justify-content: center; 
+}
+
+@media (min-width: 650px) {
+  .grid-container {
+  	grid-template-areas: 
+  	"gallery"
+    "image-place";
+	}
+}
+
+/*.right {
     height: auto;
     overflow: hidden;
     position: fixed;
- }
+ }*/
 
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
 
 #images img{
 	margin-bottom: 30px;
 	display: block;
 }
 .gallery-item{
-	width: 20%;
     height: auto;
     overflow: auto;
-   	overflow-y: scroll;
-	overflow-x: hidden;
+   	overflow-x: hidden;
+   	text-align: center;
 }
 
 .gallery-image {
