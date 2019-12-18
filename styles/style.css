@@ -4,79 +4,54 @@ body {
     padding: 0;
     margin: 0px auto;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
-/*.left {
+#left {
     width: 20%;
-    height: auto;
     padding-bottom: 50px;
-    overflow: auto;
     text-align: center;
-    border-right: 1px solid;
     background-color: #fff9e6;
 	display: inline-block;
-}*/
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "gallery image-place";
+	overflow-y: scroll;
+    height: 100vh;
 }
 
-.image-place { 
-	grid-area: image-place; 
-}
-
-.gallery { 
-	grid-area: gallery; 
-	justify-content: center; 
-}
-
-@media (min-width: 650px) {
-  .grid-container {
-  	grid-template-areas: 
-  	"gallery"
-    "image-place";
-	}
-}
-
-/*.right {
+#right {
     height: auto;
     overflow: hidden;
     position: fixed;
- }*/
+ }
+
+#left, #right{
+	display: inline-block;
+}
 
 #imgtext {
-  position: absolute;
+  float: left;
   bottom: 15px;
   left: 15px;
-  color: white;
   font-size: 20px;
+  margin: 20px;
+  vertical-align: middle;
+}
+
+#imgsize {
+	float: right;
+	font-size: 15px;
+	margin-right: 20px;
 }
 
 #images img{
 	margin-bottom: 30px;
 	display: block;
 }
-.gallery-item{
-    height: auto;
-    overflow: auto;
-   	overflow-x: hidden;
-   	text-align: center;
-}
 
 .gallery-image {
 	width: 200px;
 	height: 200px;
 	margin: 3%;
-    overflow: auto;
     text-align: center;
 	display: inline-block;
 }
 
-#textOfImage{
-	font-family: Calibri, Georgia;  
-    font-size: 16px;
-    text-align: center;
-}

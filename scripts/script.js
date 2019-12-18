@@ -6,7 +6,7 @@ async function galleryLoad() {
     
     let galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery-item');
-    galleryItem.innerHTML = `<img class="gallery-image" src="${images[i].download_url}" alt="gallery image" onclick="expandImage(this);"/>`;
+    galleryItem.innerHTML = `<img class="gallery-image" src="${images[i].download_url}" alt="${images[i].author}" onclick="expandImage(this);"/>`;
     document.getElementById("left").appendChild(galleryItem);
     }
 }
@@ -15,7 +15,10 @@ function expandImage(imgs) {
   
   var expandImg = document.getElementById("expandedImg");
   var imgText = document.getElementById("imgtext");
+  var imgSize = document.getElementById("imgsize");
   expandImg.src = imgs.src;
+  var width = expandImg.naturalWidth;
+  var height = expandImg.naturalHeight;
   imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
+  imgsize.innerHTML = `Width ` + width + `<br> Height ` + height;
 }

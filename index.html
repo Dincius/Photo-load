@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Picsum Photos Image List</title>
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -10,17 +10,21 @@
 </head>
 <body>
 
-<div class="grid-container">
-	<div class="image-place">
+<div class="both">
 
-		<div id="imgtext"></div> 
+	<div id="left">
+		<script type="text/javascript">galleryLoad();</script>
+	</div>
+
+	<div id="right">
+
+		<p id="imgtext"></p>
+		<p id="imgsize"></p> 
 		<img id="expandedImg" style="width:100%">
 
 	</div>
 	
-	<div class="gallery">
-		<div id="left"><script type="text/javascript">galleryLoad();</script></div>
-	</div>
+
 
 </div>
 
