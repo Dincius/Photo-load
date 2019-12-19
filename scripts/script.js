@@ -2,7 +2,7 @@ async function galleryLoad() {
   const response = await fetch('https://picsum.photos/v2/list');
   const images = await response.json();
 
-  for (var i = 0; i < images.length; i++) {
+  for (let i = 0; i < images.length; i++) {
     
     let galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery-item');
@@ -13,12 +13,12 @@ async function galleryLoad() {
 
 function expandImage(imgs) {
   
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  var imgSize = document.getElementById("imgsize");
+  const expandImg = document.getElementById("expandedImg");
+  const imgText = document.getElementById("imgtext");
+  const imgSize = document.getElementById("imgsize");
   expandImg.src = imgs.src;
-  var width = expandImg.naturalWidth;
-  var height = expandImg.naturalHeight;
+  const width = expandImg.naturalWidth;
+  const height = expandImg.naturalHeight;
   imgText.innerHTML = imgs.alt;
   imgsize.innerHTML = `Width: ` + width + `<br> Height: ` + height;
 }
