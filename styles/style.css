@@ -1,15 +1,11 @@
 body {   
-    width: 100%;
-    height: auto;
-    padding: 0;
     margin: 0px auto;
     margin-bottom: 30px;
     overflow: hidden;
 }
 
 #left {
-    width: 20%;
-    padding-bottom: 50px;
+    width: 250px;
     text-align: center;
     background-color: #fff9e6;
 	display: inline-block;
@@ -18,8 +14,6 @@ body {
 }
 
 #right {
-    height: auto;
-    overflow: hidden;
     position: fixed;
  }
 

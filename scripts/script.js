@@ -20,5 +20,5 @@ function expandImage(imgs) {
   var width = expandImg.naturalWidth;
   var height = expandImg.naturalHeight;
   imgText.innerHTML = imgs.alt;
-  imgsize.innerHTML = `Width ` + width + `<br> Height ` + height;
+  imgsize.innerHTML = `Width: ` + width + `<br> Height: ` + height;
 }
